@@ -19,13 +19,25 @@
         <input type="password" class="form-control" id="user_info_password" name="password" placeholder="Password">
       </div>
       <div class="form-group">
-        <label for="user_info_size">Size</label>
-        <select class="form-control valid" id="user_info_size" name="size">
+        <label for="user_info_top_size">Top Size</label>
+        <select class="form-control valid" id="user_info_top_size" name="top_size">
           <option>90</option>
           <option>95</option>
           <option>100</option>
           <option>105</option>
           <option>110</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="user_info_bottom_size">Bottom Size</label>
+        <select class="form-control valid" id="user_info_bottom_size" name="bottom_size">
+          <option>xxs</option>
+          <option>xs</option>
+          <option>s</option>
+          <option>m</option>
+          <option>l</option>
+          <option>xl</option>
+          <option>xxl</option>
         </select>
       </div>
       <button id="submit" type="submit" class="btn btn-primary">Submit</button>
@@ -37,6 +49,7 @@
     <script src="https://www.gstatic.com/firebasejs/4.1.1/firebase.js"></script>
     <script src="./js/database.js"></script>
     <script src="./js/popup.js"></script>
+    <script src="./js/auto_select.js"></script>
     
   </body>
 </html>

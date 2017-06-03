@@ -25,25 +25,18 @@ $(document).ready(function(){
 
 	$("#submit").click(function(event){
 		var form_data=$("#user_info").serializeArray();
-        console.log(form_data);
-        console.log(form_data[0].name);
-        console.log(form_data.name);
-        console.log(form_data.name);
 		var error_free=true;
 		for (var input in form_data){
 			var element=$("#user_info_"+form_data[input]['name']);
-            console.log(element);
 			var valid=element.hasClass("valid");
-            console.log(valid);
 			if (!valid) error_free=false;
 		}
 		if (!error_free){
+            alert("input field is not valid.");
 			event.preventDefault(); 
-            console.log("error");
 		}
 		else{
 			event.preventDefault(); 
-            console.log("no error");
             writeUserData(form_data);
 		}
 	});
