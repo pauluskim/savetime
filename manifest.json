@@ -10,5 +10,6 @@
     "default_popup": "popup.html",
     "default_title": "Click here!"
   },
-  "content_security_policy": "script-src 'self' https://www.gstatic.com/firebasejs/4.1.1/firebase.js https://code.jquery.com/jquery-3.2.1.min.js; object-src 'self'"
+  "content_security_policy": "script-src 'self' https://cdn.firebase.com https://*.firebaseio.com https://www.gstatic.com/firebasejs/4.1.1/firebase.js; object-src 'self'"
 }
+
