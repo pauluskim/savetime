@@ -6,6 +6,17 @@ function writeUserData(user_data) {
     UserRef.push(input_form);
 }
 
+//popup 스크립트에서 gilt.com 페이지 자바스크립트 로딩에 접근하는 문제를 해결해야함.
+chrome.browserAction.onClicked.addListener(function(tab) {
+console.log("clicked");
+    chrome.tabs.executeScript(tab.id, {
+        file: "content_script.js"
+    }, function() {
+        if (chrome.runtime.lastError) {
+            console.error(chrome.runtime.lastError.message);
+        }
+    });
+});
 $(document).ready(function(){
 	$('.form-control').on('input', function() {
 		var input=$(this);
